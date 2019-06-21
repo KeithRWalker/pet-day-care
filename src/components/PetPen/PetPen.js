@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import petShape from '../../helpers/propz/petShape';
+import Pet from '../Pet/Pet';
 
 import './PetPen.scss';
-
-import Pet from '../pet/pet';
 
 class PetPen extends React.Component {
   static propTypes = {
@@ -17,8 +16,8 @@ class PetPen extends React.Component {
         <Pet key={pet.id} pet={pet} />
     ));
     return (
-      <div className="PetPen">
-        <div className="petpen-title">Pets</div>
+      <div className="pet-pen">
+        <div className="pet-pen-title">The Pets We Watch!</div>
         { makePets }
       </div>
     );
