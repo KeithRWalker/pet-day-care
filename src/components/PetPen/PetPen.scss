@@ -1,0 +1,19 @@
+.PetPen{
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-flow: column wrap;
+  border: 5px outset rgba(128, 128, 128, 0.25);
+  padding: 5em;
+  height: 50%;
+  width: 50%;
+  background-color: #8080800c;
+}
+
+.petpen-title{
+  font-size: 4em;
+  font-weight: 700;
+  text-align: center;
+  padding: 0px;
+  border-bottom: .25em double rgb(128, 128, 128);
+}
