@@ -13,28 +13,39 @@ class Pet extends React.Component {
     const { pet } = this.props;
     const imgAlt = `An Animal named ${pet.name}`;
     return (
-      <div className="Pet col-3">
-        <div className="card mb-3">
-          <div className="row no-gutters">
-            <div className="col-md-4">
-              <img src={pet.img} className="card-img-top" alt={imgAlt}/>
-            </div>
-            <div className="col-md-8">
-                <div className="card-body">
-                  <h5 className="card-title">{pet.name}</h5>
-                  <li>id:{pet.id}</li>
-                  <li>type: {pet.type}</li>
-                  <li>species: {pet.species}</li>
-                  <li>sex: {pet.sex}</li>
-                  <li>color: {pet.color}</li>
-                  <li>owner: {pet.owner}</li>
-                  <li>weight: {pet.weight}</li>
-                  <li>notes: {pet.notes}</li>
-                </div>
+          <div className="row pet-card">
+
+          <div className="pet-img-con">
+            <h4 className="pet-name">{pet.name}</h4>
+            <img className="pet-img" src={pet.img} alt={imgAlt}/>
+          </div>
+
+          <div className="col">
+            <div className="col pet-info">
+              <strong className="subtitle">Info:</strong><br/>
+
+              <div className="pet-info-text">
+                <div><strong>Owner:</strong> {pet.owner}</div>
+                <div><strong>Type:</strong> {pet.type}</div>
+                <div><strong>Sex:</strong> {pet.sex}</div>
+                <div><strong>Color:</strong> {pet.color}</div>
+                <div><strong>Weight:</strong> {pet.weight}</div>
+                <div><strong>Species:</strong> {pet.species}</div>
+              </div>
+
             </div>
           </div>
-        </div>
-      </div>
+
+          <div className="col">
+            <div className="col pet-notes">
+              <strong className="subtitle">Notes:</strong><br/>
+
+              <div className="pet-notes-text"><br/>{pet.notes}</div>
+
+            </div>
+          </div>
+
+          </div>
     );
   }
 }

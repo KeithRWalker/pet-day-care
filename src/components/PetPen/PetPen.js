@@ -17,7 +17,8 @@ class PetPen extends React.Component {
         <Pet key={pet.id} pet={pet} />
     ));
     return (
-      <div className="PetPen d-flex flex-wrap">
+      <div className="PetPen">
+        <div className="petpen-title">Pets</div>
         { makePets }
       </div>
     );

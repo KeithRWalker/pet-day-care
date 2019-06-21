@@ -1,0 +1,59 @@
+.pet-card{
+  border: 5px outset rgba(128, 128, 128, 0.25);
+  margin: 1em;
+  max-width: 100%;
+  padding: 1em;
+  background-color: #80808034;
+}
+
+.pet-img-con{
+  text-align: center;
+}
+
+.pet-img{
+  width: 250px;
+  height: 250px;
+  margin-right: 1em;
+  border-radius: 100%;
+  border: 7px outset rgba(200, 200, 200, 0.25);
+}
+
+.pet-name{
+  color: rgb(94, 170, 94);
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.subtitle{
+  color: rgb(134, 71, 71);
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.pet-info{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.pet-notes{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.pet-info-text strong{
+  color: rgb(135, 170, 135);
+  font-size: 1.50;
+  font-weight: 800;
+}
+
+.pet-info-text{
+  font-weight: 200;
+  font-size: 1.12em;
+}
+
+.pet-notes-text{
+  font-weight: 200;
+  font-size: 1.12em;
+}
