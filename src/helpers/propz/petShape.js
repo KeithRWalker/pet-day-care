@@ -15,4 +15,4 @@ const petShape = PropTypes.shape({
   notes: PropTypes.string.isRequired,
 });
 
-export default { petShape }
+export default { petShape };

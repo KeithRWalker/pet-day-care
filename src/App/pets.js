@@ -35,7 +35,7 @@ const pets = [
     color: 'Black/White',
     name: 'Grimm',
     owner: 'Brittney Sullivan',
-    img: 'https://www.instagram.com/p/BwOCr_un3xK/media/?size=m',
+    img: 'https://www.instagram.com/p/BrGVpW8Ad6b/media/?size=m',
     weight: 33,
     age: 2,
     isBoarded: true,
@@ -70,7 +70,7 @@ const pets = [
     notes: 'DO NOT HANDLE',
   },
   {
-    id: 'pet3',
+    id: 'pet6',
     type: 'Lizard',
     species: 'Leapord Gecko',
     sex: 'Female/Male',
