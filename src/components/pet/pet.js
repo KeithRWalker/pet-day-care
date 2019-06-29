@@ -11,13 +11,13 @@ class Pet extends React.Component {
 
   render() {
     const { pet } = this.props;
-    const imgAlt = `An Animal named ${pet.name}`;
     return (
+      <div className="Pet">
           <div className="row pet-card">
 
           <div className="pet-img-con">
             <h4 className="pet-name">{pet.name}</h4>
-            <img className="pet-img" src={pet.img} alt={imgAlt}/>
+            <img className="pet-img" src={pet.img} alt="nothing"/>
           </div>
 
           <div className="col">
@@ -45,6 +45,7 @@ class Pet extends React.Component {
             </div>
           </div>
 
+          </div>
           </div>
     );
   }

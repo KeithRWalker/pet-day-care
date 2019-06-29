@@ -1,24 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import petShape from '../../helpers/propz/petShape';
+
+import petData from '../../helpers/data/petData';
+
 import Pet from '../Pet/Pet';
 
 import './PetPen.scss';
 
 class PetPen extends React.Component {
-  static propTypes = {
-    pets: PropTypes.arrayOf(petShape.petShape),
+  state = {
+    pets: [],
   };
 
+  componentDidMount() {
+    petData.getPets()
+      .then(pets => this.setState({ pets }))
+      .catch(err => console.error('error from PetPen.js', err));
+  }
+
   render() {
-    const { pets } = this.props;
-    const makePets = pets.map(pet => (
-        <Pet key={pet.id} pet={pet} />
+    const petComponents = this.state.pets.map(pet => (
+        <Pet key={pet.name} pet={pet} />
     ));
+
     return (
-      <div className="pet-pen">
+      <div className="PetPen">
         <div className="pet-pen-title">The Pets We Watch!</div>
-        { makePets }
+        {petComponents}
       </div>
     );
   }
