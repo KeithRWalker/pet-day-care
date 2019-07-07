@@ -1,24 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import staffShape from '../../helpers/propz/staffShape';
+
+import staffData from '../../helpers/data/staffData';
+
 import Staffmember from '../Staffmember/Staffmember';
 
 import './StaffRoom.scss';
 
 class StaffRoom extends React.Component {
-  static propTypes = {
-    staff: PropTypes.arrayOf(staffShape.staffShape),
-  };
+  state = {
+    staff: [],
+  }
+
+  componentDidMount() {
+    staffData.getStaff()
+      .then(staff => this.setState({ staff }))
+      .catch(err => console.error('error from staffRoom', err));
+  }
 
   render() {
-    const { staff } = this.props;
-    const makeStaff = staff.map(staffmember => (
-        <Staffmember key={staffmember.id} staffmember={staffmember} />
+    const staffComponents = this.state.staff.map(staffmember => (
+        <Staffmember key={staffmember.name} staffmember={staffmember} />
     ));
+
     return (
-      <div className="staff-room">
+      <div className="StaffRoom">
         <div className="staff-room-title">Our Staff!</div>
-        { makeStaff }
+        { staffComponents }
       </div>
     );
   }
