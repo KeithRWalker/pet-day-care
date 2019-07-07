@@ -2,8 +2,6 @@ import React from 'react';
 
 import petShape from '../../helpers/propz/petShape';
 
-import './Pet.scss';
-
 class Pet extends React.Component {
   static propTypes = {
     pet: petShape.petShape,
